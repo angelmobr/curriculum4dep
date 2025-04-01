@@ -1,0 +1,803 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    /*outline: 1px solid red;*/
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    text-align: justify;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #101630;
+}
+
+.cmn-divfloat {
+    position: fixed !important;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(20px); /* Ligeramente desplazado hacia abajo */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Suaviza la aparición/desaparición */
+    pointer-events: none; /* Evita interacción cuando está invisible */
+}
+
+.cmn-btncircle i {
+    color: #FFFFFF; /* Cambia la flecha a negro */
+    font-size: 20px; /* Ajusta el tamaño */
+    transition: color 0.3s ease;
+}
+
+.cmn-divfloat.show {
+    opacity: 1;
+    transform: translateY(0); /* Aparece en su posición normal */
+    pointer-events: auto; /* Permite la interacción */
+}
+
+.cmn-btncircle {
+    width: 50px !important;
+    height: 50px !important;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#32C8D9;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cmn-btncircle:hover {
+    
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+img {
+    max-width: 100%;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #49bada;
+    font-size: 25px;
+}
+
+.logo {
+    color: #49bada;
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Estilo base para los elementos del menú */
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: #49bada;
+}
+
+/* Esconde el menú en pantallas pequeñas por defecto */
+#menu {
+    display: none;
+}
+
+/* Estilos del icono del menú */
+.menu-icono {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Cuando la pantalla es pequeña, muestra el icono del menú */
+@media screen and (max-width: 768px) {
+    /* Mostrar el ícono del menú en pantallas pequeñas */
+    .menu-icono {
+        display: block;
+    }
+
+    /* El menú debe estar oculto por defecto */
+    .navbar ul {
+        display: none;
+        width: 100%;
+        background-color: #32C8D9;
+    }
+
+    /* Cuando el checkbox está marcado, mostrar el menú */
+    #menu:checked + label + .navbar ul {
+        display: block;
+    }
+
+    /* Estilo para que los elementos de la lista ocupen el 100% */
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        padding: 15px;
+        font-size: 18px;
+    }
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header {
+   
+    min-height: 10vh;
+    padding: 90px 0 0 0;
+    
+}
+
+.header-content {
+    display: flex;
+    flex: 1;
+}
+
+.header-txt {
+    flex-basis: 50%;
+}
+
+
+
+.header txt span {
+    font-size: 30px;
+    font-weight: 600;
+    color: #868B9E;
+}
+
+.header-txt h1 {
+    font-size: 95px;
+    color: #FFFFFF;
+    line-height: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 10px 0 0px 0;
+    white-space: nowrap;
+
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 13px 35px;
+    background: linear-gradient(90deg,
+            rgba(50, 200, 217, 1) 0%,
+            rgba(74, 42, 193, 1) 100%);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.about-img {
+    flex-basis: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Asegura que la imagen se centre dentro de este contenedor */
+}
+
+.about-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f0f0f0;
+    border: 4px solid #49bada;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+
+.about-img img:hover {
+    transform: scale(1.1); /* Hace el zoom al pasar el cursor */
+}
+
+
+
+.about-txt {
+    flex-basis: 60%;
+}
+
+h2 {
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #32C8D9;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    margin-left: 7mm;
+    
+}
+
+.about-txt p {
+    color: #b3b3b3;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.personal-info dl {
+    font-size: 17px;
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 10px 20px;
+    /* Espacio entre las columnas y filas */
+    align-items: center;
+    background: #f4f4f4;
+    /* Fondo suave */
+    padding: 20px;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    /* Ancho máximo */
+    margin: 0 auto;
+    /* Centrado */
+    display: flex;
+    /* Flexbox para alinear elementos */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 40px;
+    /* Espacio entre el botón y los datos */
+
+
+}
+
+.personal-info dt {
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+.personal-info dd {
+    margin: 0;
+    color: #ffffff;
+}
+
+.personal-info a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.butons a {
+    margin-right: 15px;
+}
+
+.portafolio-content {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 40px;
+
+}
+
+.portafolio-1 {
+    display: flex;
+    margin-bottom: 25px;
+    background: #101029;
+    /* Fondo de la caja */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    padding: 50px;
+    /* Espaciado interno */
+    max-width: 1200px;
+    /* Ancho máximo */
+    margin: 50px auto;
+    /* Centrar la caja */
+    overflow: hidden;
+    min-height: 400px;
+
+}
+
+.portafolio-box {
+    display: flex;
+    margin-bottom: 25px;
+    background: #101029;
+    /* Fondo de la caja */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    padding: 50px;
+    /* Espaciado interno */
+    max-width: 1200px;
+    /* Ancho máximo */
+    
+    /* Centrar la caja */
+    overflow: hidden;
+    min-height: 400px;
+
+
+}
+
+
+.contenedor-box h3 {
+    font-size: 25px;
+    color: #FFFFFF;
+    /* Color brillante para los títulos */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+
+/* Estilo para la lista */
+.contenedor-box ul {
+    list-style-type: none;
+    /* Eliminar los puntos por defecto */
+    padding-left: 0;
+}
+
+/* Estilo para cada ítem de la lista */
+.contenedor-box li {
+    font-size: 18px;
+    color: #ecf0f1;
+    /* Color blanco suave para las habilidades */
+    padding: 8px 0;
+    margin: 5px 0;
+    border-bottom: 1px solid #34495e;
+    /* Líneas separadoras entre las habilidades */
+    transition: all 0.3s ease;
+    /* Suaviza el efecto al pasar el ratón */
+}
+
+/* Efecto hover para los ítems de la lista */
+.contenedor-box li:hover {
+    color: #32C8D9;
+    /* Cambiar el color al pasar el ratón */
+    transform: translateX(5px);
+    /* Desplazamiento sutil a la derecha */
+}
+
+
+
+
+
+
+
+.portafolio-txt {
+    flex-basis: 100%;
+
+
+}
+
+.portafolio-txt span {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    color: #32C8D9;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+
+.portafolio-txt h3 {
+    color: #FFFFFF;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.portafolio-txt p {
+    font-size: 17px;
+    color: #c5c5c5c5;
+    margin-bottom: 25px;
+}
+
+.portafolio-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.portafolio-img img {
+    width: 400px;
+}
+
+.skills {
+    padding: 0px 0 100px 0;;
+
+}
+
+.skills-content {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    justify-content: right;
+    align-items: center;
+   
+}
+
+.skills-content img {
+    width: 70px;
+}
+
+.skills-content h2 {
+    
+    justify-content: right;
+    align-items: center;
+   
+}
+
+
+.footer {
+    padding: 50px 0;
+    background: linear-gradient(90deg,
+            rgba(74, 42, 193, 1) 0%,
+            rgba(50, 200, 217, 1)100%);
+
+}
+
+
+.contenedor { /*CONTENEDOR DONDE ESTAN LAS CAJAS DE HABILIDADES/*
+    /* CONTENEDOR DONDE ESTAN LAS CAJAS DE HABILIDADES */
+    display: flex;          /* Usamos flexbox para alinear los items */
+    justify-content: space-around;  /* Espacio entre las cajas */
+    gap: 25px;    
+    background-color:#101630;  
+    flex-wrap: wrap;         /* Permite que las cajas se ajusten en pantallas pequeñas */
+    /* Espaciado padding: 20px;            */
+    max-width: 1200px;       /* Ancho máximo */
+    margin: auto;            /* Centra el contenedor */
+}
+
+/* Estilo de cada contenedor individual */
+.contenedor-item {
+  flex: 1;                /* Hace que los contenedores ocupen el mismo espacio */
+  background-color: #f2f2f2;  /* Fondo gris claro para los contenedores */
+  padding: 20px;          /* Espacio interno */
+  border-radius: 10px;    /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+.contenedor-item h3 {
+  margin-top: 0;          /* Elimina margen superior del título */
+}
+
+.tecnologias-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.tecnologia-proyecto {
+    width: max-content;
+    padding: 0.1em 0.3em;
+    border-radius: 5px;
+    color: var(--background);
+}
+
+.html {
+    background-color: #f75421;
+}
+
+.css {
+    background-color: #2d53e5;
+}
+
+.javascript {
+    background-color: #ffd43b;
+}
+
+.wordpress {
+    background-color: #28799e;
+}
+
+.node {
+    background-color: #84bf08;
+}
+
+.angular {
+    background-color: #de0837;
+}
+
+.react {
+    background-color: #66dbfb;
+}
+
+.bootstrap {
+    background-color: #7c18f8;
+}
+
+.elementor {
+    background-color: #FF1493;
+}
+
+.vacio {
+    display: none !important;
+}
+
+/* Contenedor envolvente para las dos cajas */
+
+
+/* Estilos de las cajas */
+.contenedor-box {
+    background: #101029;
+    /* Fondo */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    padding: 40px;
+    /* Espaciado interno */
+    flex: 1;
+    /* Hace que ambas cajas tengan el mismo tamaño */
+    min-height: 350px;
+    /* Establece la misma altura mínima */
+    transition: transform 0.3s;
+    /* Efecto suave */
+
+}
+
+/* Estilo para los ítems dentro de las cajas */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    font-size: 18px;
+    color: #ffffff;
+    /* Color del texto */
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list i {
+    margin-right: 10px;
+    /* Espacio entre el icono y el texto */
+    font-size: 24px;
+}
+
+.tecnologias_pagina {
+    display: flex;
+    flex-direction: column;
+    /* Mantiene el título arriba */
+    align-items: center;
+    gap: 1em;
+}
+
+.pagina {
+    display: flex;
+    /* Elementos en fila */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 1em;
+    /* Espacio entre las tecnologías */
+}
+
+.tecnologias_pagina h3 {
+    font-weight: 300;
+    color: #ffffff;
+    /* Cambia el color del texto (usa el código hexadecimal o nombre del color) */
+}
+
+.contacto {
+    display: flex;
+    /* Alinea los elementos en fila */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 1.5em;
+    /* Espacio uniforme entre elementos */
+    padding: 1.5em;
+    /* Espaciado interno */
+    /* Fondo suave para destacar la sección */
+
+
+}
+
+/* Botón CV */
+.btn-1 {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.75em 1.5em;
+    background: #49bada;
+    /* Color LinkedIn */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-1:hover {
+    background: #005582;
+    /* Oscurece al pasar el mouse */
+    transform: scale(1.1);
+}
+
+/* Enlaces de contacto */
+.link-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    /* Color LinkedIn */
+    background: #49bada;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link-contacto:hover {
+    background: #0077b5;
+    /* Azul LinkedIn al hacer hover */
+    color: #fff;
+    /* Íconos blancos */
+    transform: scale(1.1);
+    /* Ligero zoom */
+}
+
+
+@media (max-width:991px) {
+
+
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #49bada;
+        display: none;
+    }
+
+    .menu .navbar ul li a:hover {
+        color: #101630;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked~.navbar {
+        display: initial;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-txt h1 {
+        font-size: 40px;
+    }
+   
+
+    .header-txt h2 {
+        font-size: 15px;       /* Reduce el subtítulo */
+    }
+
+    .about {
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img {
+        text-align: center;
+    }
+
+    .about-img img {
+        
+        margin-bottom: 15px;
+    }
+
+    .butons a {
+        margin: 0 0 10px 0;
+    }
+
+    .portafolio {
+        padding: 30px;
+    }
+
+    .portafolio-1 {
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-content: center;
+    }
+
+    .portafolio-box {
+        flex-direction: column;
+        margin-bottom: 20px;
+        align-content: center;
+    }
+
+    
+    .portafolio-txt {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .portafolio-img {
+        order: 2;
+    }
+
+    .portafolio-img img {
+        width: 250px;
+    }
+
+ 
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
