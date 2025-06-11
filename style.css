@@ -11,6 +11,7 @@
 }
 
 html {
+<<<<<<< HEAD
     scroll-behavior: smooth; /* Suaviza el desplazamiento al hacer clic en enlaces de anclaje */
 }
 
@@ -24,6 +25,22 @@ body {
 }
 
 .cmn-divfloat { /* Contenedor flotante */
+=======
+    scroll-behavior: smooth;
+}
+
+p {
+    text-align: justify;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #101630;
+}
+
+.cmn-divfloat {
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     position: fixed !important;
     bottom: 10px;
     right: 10px;
@@ -33,7 +50,10 @@ body {
     transform: translateY(20px); /* Ligeramente desplazado hacia abajo */
     transition: opacity 0.4s ease, transform 0.4s ease; /* Suaviza la aparición/desaparición */
     pointer-events: none; /* Evita interacción cuando está invisible */
+<<<<<<< HEAD
     
+=======
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 }
 
 .cmn-btncircle i {
@@ -59,12 +79,25 @@ body {
     align-items: center;
     justify-content: center;
     background-color:#32C8D9;
+<<<<<<< HEAD
     
+=======
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 }
 
 .cmn-btncircle:hover {
     
+<<<<<<< HEAD
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.411);
+=======
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+img {
+    max-width: 100%;
+    
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 }
 
 .container {
@@ -72,6 +105,16 @@ body {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+.skills container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    
+}
+
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 .menu {
     position: absolute;
     top: 0;
@@ -152,6 +195,13 @@ body {
     }
 }
 
+<<<<<<< HEAD
+=======
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 
 .header {
    
@@ -160,9 +210,32 @@ body {
     
 }
 
+<<<<<<< HEAD
 .header-txt h1 { /* Título principal (Nombre) */
     font-size: 95px;
     color: #ffffff;
+=======
+.header-content {
+    display: flex;
+    flex: 1;
+}
+
+.header-txt {
+    flex-basis: 50%;
+}
+
+
+
+.header txt span {
+    font-size: 30px;
+    font-weight: 600;
+    color: #868B9E;
+}
+
+.header-txt h1 {
+    font-size: 95px;
+    color: #FFFFFF;
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     line-height: 1;
     font-family: 'Bebas Neue', sans-serif;
     margin: 10px 0 0px 0;
@@ -170,21 +243,43 @@ body {
 
 }
 
+<<<<<<< HEAD
 
+=======
+.btn-1 {
+    display: inline-block;
+    padding: 13px 35px;
+    background: linear-gradient(90deg,
+            rgba(50, 200, 217, 1) 0%,
+            rgba(74, 42, 193, 1) 100%);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 10px;
+}
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 
 .about {
     display: flex;
     align-items: center;
 }
 
+<<<<<<< HEAD
 .about-img { /* Contenedor de la imagen */
+=======
+.about-img {
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     flex-basis: 50%;
     margin: 0 auto;
     display: flex;
     justify-content: center; /* Asegura que la imagen se centre dentro de este contenedor */
 }
 
+<<<<<<< HEAD
 .about-img img { /* Imagen marco */
+=======
+.about-img img {
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -193,13 +288,22 @@ body {
     border: 4px solid #49bada;
     display: block;
     margin: 0 auto;
+<<<<<<< HEAD
     transition: transform 0.3s ease; /* Transición suave */
+=======
+    transition: transform 0.3s ease; /* Añade una transición suave */
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 }
 
 .about-img img:hover {
     transform: scale(1.1); /* Hace el zoom al pasar el cursor */
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 .about-txt {
     flex-basis: 60%;
 }
@@ -218,11 +322,73 @@ h2 {
     color: #b3b3b3;
     font-size: 17px;
     margin-bottom: 5px;
+<<<<<<< HEAD
     text-align: justify;
 }
 
 
 .portafolio-box { /* Contenedor de la cajas */
+=======
+}
+
+.personal-info dl {
+    font-size: 17px;
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: 10px 20px;
+    /* Espacio entre las columnas y filas */
+    align-items: center;
+    background: #f4f4f4;
+    /* Fondo suave */
+    padding: 20px;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    /* Ancho máximo */
+    margin: 0 auto;
+    /* Centrado */
+    display: flex;
+    /* Flexbox para alinear elementos */
+    align-items: center;
+    /* Centra verticalmente */
+    gap: 40px;
+    /* Espacio entre el botón y los datos */
+
+
+}
+
+.personal-info dt {
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+.personal-info dd {
+    margin: 0;
+    color: #ffffff;
+}
+
+.personal-info a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.butons a {
+    margin-right: 15px;
+}
+
+.portafolio-content {
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 40px;
+
+}
+
+.portafolio-1 {
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     display: flex;
     margin-bottom: 25px;
     background: #101029;
@@ -234,12 +400,45 @@ h2 {
     padding: 50px;
     /* Espaciado interno */
     max-width: 1200px;
+<<<<<<< HEAD
     /* Centrar la caja */
     overflow: hidden;
     min-height: 400px;
     text-align: justify;
 }
 
+=======
+    /* Ancho máximo */
+    margin: 50px auto;
+    /* Centrar la caja */
+    overflow: hidden;
+    min-height: 400px;
+
+}
+
+.portafolio-box {
+    display: flex;
+    margin-bottom: 25px;
+    background: #101029;
+    /* Fondo de la caja */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    padding: 50px;
+    /* Espaciado interno */
+    max-width: 1200px;
+    /* Ancho máximo */
+    
+    /* Centrar la caja */
+    overflow: hidden;
+    min-height: 400px;
+
+
+}
+
+
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 .contenedor-box h3 {
     font-size: 25px;
     color: #FFFFFF;
@@ -249,6 +448,11 @@ h2 {
     letter-spacing: 1px;
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 /* Estilo para la lista */
 .contenedor-box ul {
     list-style-type: none;
@@ -279,7 +483,21 @@ h2 {
 
 
 
+<<<<<<< HEAD
 .portafolio-txt span { /*Caja titulo*/
+=======
+
+
+
+
+.portafolio-txt {
+    flex-basis: 100%;
+
+
+}
+
+.portafolio-txt span {
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     font-size: 18px;
     font-weight: 600;
     display: block;
@@ -289,7 +507,11 @@ h2 {
 
 }
 
+<<<<<<< HEAD
 .portafolio-txt h3 {    /* Caja subtitulo */
+=======
+.portafolio-txt h3 {
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     color: #FFFFFF;
     font-size: 25px;
     text-transform: capitalize;
@@ -298,16 +520,68 @@ h2 {
 
 }
 
+<<<<<<< HEAD
 .portafolio-txt p { /* Caja informacion */
+=======
+.portafolio-txt p {
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     font-size: 17px;
     color: #c5c5c5c5;
     margin-bottom: 25px;
 }
 
+<<<<<<< HEAD
 .skills { 
     padding: 0px 0 100px 0;;
 }
 
+=======
+.portafolio-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.portafolio-img img {
+    width: 400px;
+}
+
+.skills {
+    padding: 0px 0 100px 0;;
+
+}
+
+.skills-content {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    justify-content: right;
+    align-items: center;
+   
+}
+
+.skills-content img {
+    width: 70px;
+}
+
+.skills-content h2 {
+    
+    justify-content: right;
+    align-items: center;
+   
+}
+
+
+.footer {
+    padding: 50px 0;
+    background: linear-gradient(90deg,
+            rgba(74, 42, 193, 1) 0%,
+            rgba(50, 200, 217, 1)100%);
+
+}
+
+
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 .contenedor { /*CONTENEDOR DONDE ESTAN LAS CAJAS DE HABILIDADES/*
     /* CONTENEDOR DONDE ESTAN LAS CAJAS DE HABILIDADES */
     display: flex;          /* Usamos flexbox para alinear los items */
@@ -320,6 +594,7 @@ h2 {
     margin: auto;            /* Centra el contenedor */
 }
 
+<<<<<<< HEAD
 /* Estilos de las cajas */
 .contenedor-box {
     background: #101029;
@@ -337,6 +612,15 @@ h2 {
     transition: transform 0.3s;
     /* Efecto suave */
 
+=======
+/* Estilo de cada contenedor individual */
+.contenedor-item {
+  flex: 1;                /* Hace que los contenedores ocupen el mismo espacio */
+  background-color: #f2f2f2;  /* Fondo gris claro para los contenedores */
+  padding: 20px;          /* Espacio interno */
+  border-radius: 10px;    /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 }
 
 .contenedor-item h3 {
@@ -396,7 +680,38 @@ h2 {
     display: none !important;
 }
 
+<<<<<<< HEAD
 /* Estilo para los ítems dentro de las cajas */
+=======
+/* Contenedor envolvente para las dos cajas */
+
+
+/* Estilos de las cajas */
+.contenedor-box {
+    background: #101029;
+    /* Fondo */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    padding: 40px;
+    /* Espaciado interno */
+    flex: 1;
+    /* Hace que ambas cajas tengan el mismo tamaño */
+    min-height: 350px;
+    /* Establece la misma altura mínima */
+    transition: transform 0.3s;
+    /* Efecto suave */
+
+}
+
+/* Estilo para los ítems dentro de las cajas */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 
 .skills-list li {
     font-size: 18px;
@@ -409,7 +724,12 @@ h2 {
 
 .skills-list i {
     margin-right: 10px;
+<<<<<<< HEAD
     font-size: 20px; /* Tamaño del ícono */
+=======
+    /* Espacio entre el icono y el texto */
+    font-size: 24px;
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 }
 
 .tecnologias_pagina {
@@ -444,7 +764,11 @@ h2 {
     /* Centra horizontalmente */
     align-items: center;
     /* Centra verticalmente */
+<<<<<<< HEAD
     gap: 1em;
+=======
+    gap: 1.5em;
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     /* Espacio uniforme entre elementos */
     padding: 1.5em;
     /* Espaciado interno */
@@ -541,9 +865,16 @@ h2 {
     .header-txt h1 {
         font-size: 40px;
     }
+<<<<<<< HEAD
 
     .header-txt h2 {
         font-size: 15px;       
+=======
+   
+
+    .header-txt h2 {
+        font-size: 15px;       /* Reduce el subtítulo */
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     }
 
     .about {
@@ -595,6 +926,10 @@ h2 {
         width: 250px;
     }
 
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
     .footer {
         padding: 30px;
     }

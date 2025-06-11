@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Angel 2</title>
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -14,6 +15,13 @@
 
     <script src="main.js"></script>
 
+=======
+    <title>Angel 1</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 </head>
 
 <body>
@@ -242,7 +250,27 @@
     <div style="height: 10px;"></div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+<<<<<<< HEAD
 
+=======
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 800,  // Duración de la animación en milisegundos
+                once: false     // Si es true, la animación solo ocurre una vez
+            });
+        });
+
+        document.addEventListener("scroll", function () {
+            let scrollButton = document.querySelector(".cmn-divfloat");
+            if (window.scrollY > 300) {
+                scrollButton.classList.add("show"); // Muestra el botón con transición
+            } else {
+                scrollButton.classList.remove("show"); // Lo oculta suavemente
+            }
+        });
+    </script>
+>>>>>>> f708b661aae194ae1a4fcc69d9ab370125a980a4
 
 </body>
 
